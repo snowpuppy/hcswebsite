@@ -1,0 +1,118 @@
+body {
+    /*
+    background-color: #adebad
+    */
+    background-color: #FFFFFF
+}
+.container {
+    max-width: 3000px
+}
+
+/* Larger than phone */
+@media (min-width: 550px) {
+}
+
+.menu-btn div {
+    position: absolute;
+    left: 100%;
+    top: 64%;
+    padding-right: 8px;
+    margin-top: -0.50em;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: 200;
+    vertical-align: middle;
+    z-index: 99;
+}
+ 
+.menu-btn span {
+    display: block;
+    width: 19px;
+    height: 3px;
+    margin: 4px 0;
+    background: rgb(0,0,0);
+    z-index: 99;
+}
+
+.menu-link {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .2rem;
+  text-decoration: none;
+  color: #222;
+}
+
+.menu-link.active {
+  color: #33C3F0; 
+} 
+
+.responsive-menu{
+    display: none;
+}
+ 
+.expand {
+    display: block !important; 
+}
+
+#TabMenu1
+{
+   float: left;
+   width: 100%;
+   font-family: Tahoma;
+   font-size: 11px;
+   line-height: normal;
+}
+#TabMenu1 ul
+{
+   margin: 0;
+   padding: 10px 0px 3px 0px;
+   list-style: none;
+}
+#TabMenu1 li
+{
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+#TabMenu1 a
+{
+   float: left;
+   background: url("images/style32left.gif") no-repeat left top;
+   margin: 0;
+   padding: 0 0 0 4px;
+   text-decoration: none;
+}
+#TabMenu1 a span
+{
+   float: none;
+   display: block;
+   background: url("images/style32right.gif") no-repeat right top;
+   padding: 5px 15px 4px 6px;
+   color: #6F9346;
+   font-weight: bold;
+   text-decoration: none;
+}
+#TabMenu1 a:hover span
+{
+   background-position: 100% -42px;
+   color: #000000;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+}
+#TabMenu1 a:hover
+{
+   background-position: 0% -42px;
+}
+#TabMenu1 #active a
+{
+   background-position: 0% -84px;
+}
+#TabMenu1 #active a span
+{
+   background-position: 100% -84px;
+   color: #FFFFFF;
+   font-weight: bold;
+   text-decoration: none;
+}

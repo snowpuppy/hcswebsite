@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>HCS Home</title>
+  <title>Schedule</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -27,8 +27,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
-  <!-- JQERY for Hamburger Menu
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <script type="text/javascript">
@@ -83,21 +81,71 @@
     </div>
     <div class="row">
       <div class="column" style="margin-top: 15%">
-        <h4>Home Page</h4>
-        <p>Our mission is to promote health and fitness among our membership with a focus on adopting healthy lifestyles.  In addition, we support camraderie among runners and other local running clubs in the area.  Finally, our organization provides support to local charities thru sponsorship of local running events several times a year.</p>
+        <h4>Google HCS Schedule</h4>
+        <iframe src="https://calendar.google.com/calendar/embed?src=b1pdf8ttt6kpo7ks8hsinunjj8%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
     </div>
     <div class="row">
-      <img class="column" src="images/homeImage.png">
+     <div class="column">
+        <p>
+            <b>HTML URL</b>: https://calendar.google.com/calendar/embed?src=b1pdf8ttt6kpo7ks8hsinunjj8%40group.calendar.google.com&ctz=America/New_York
+            <br>
+            <b>ICAL URL</b>: https://calendar.google.com/calendar/ical/b1pdf8ttt6kpo7ks8hsinunjj8%40group.calendar.google.com/public/basic.ics
+        </p>
+     </div>
     </div>
     <div class="row">
-      <div class="column">
-        <h4>Who are the members of the Highland City Striders?</h4>
-        <p>We are runners who live in the greater Marlborough/Hudson area, who meet weekly to run various distances for fun and to keep in shape! We run, sweat and laugh together. Our club has been in existence since April 2002. All of our members are 18 years old and older, some of us are significantly older!</p>
-        <h4>What does it mean to be a Strider?</h4>
-        <p>The Highland City Striders is a small group of runners who love to run together, play together and EAT together. We run weekly workouts and participate in local road races. In addition, we coordinate and run a number of low key races that support the local community. For example, last Thanksgiving we organized a road race that helped to raise over 1000 food items for the local food pantry.</p>
-      </div>
+     <div class="column" style="margin-top: 5%">
+        <h4> Table Style HCS Schedule</h4>
+        <!-- Display the document style schedule -->
+            <div align="left">
+                <div id="TabMenu1">
+                <ul>
+                <li><a href="./files/schedules/JanSched.htm" target="SchedFrame"><span>Jan</span></a></li>
+                <li><a href="./files/schedules/FebSched.htm" target="SchedFrame"><span>Feb</span></a></li>
+                <li><a href="./files/schedules/MarSched.htm" target="SchedFrame"><span>Mar</span></a></li>
+                <li><a href="./files/schedules/AprSched.htm" target="SchedFrame"><span>Apr</span></a></li>
+                <li><a href="./files/schedules/MaySched.htm" target="SchedFrame"><span>May</span></a></li>
+                <li><a href="./files/schedules/JunSched.htm" target="SchedFrame"><span>Jun</span></a></li>
+                <li><a href="./files/schedules/JulSched.htm" target="SchedFrame"><span>Jul</span></a></li>
+                <li><a href="./files/schedules/AugSched.htm" target="SchedFrame"><span>Aug</span></a></li>
+                <li><a href="./files/schedules/SepSched.htm" target="SchedFrame"><span>Sep</span></a></li>
+                <li><a href="./files/schedules/OctSched.htm" target="SchedFrame"><span>Oct</span></a></li>
+                <li><a href="./files/schedules/NovSched.htm" target="SchedFrame"><span>Nov</span></a></li>
+                <li><a href="./files/schedules/DecSched.htm" target="SchedFrame"><span>Dec</span></a></li>
+                </ul>
+                </div>
+            </div>
+
+            <iframe name="SchedFrame" id="InlineFrame1" style="width:100%;height:600px;z-index:5;border:3px #005500 solid" src="./files/schedules/XXXSched.htm" frameborder="0">Your browser does not support inline frames or is currently configured not to display inline frames.</iframe>
+
+     </div>
     </div>
+    <div class="row">
+     <div class="column" style="margin-top: 5%">
+        <h4> Additional Scheduling Notes </h4>
+        <h5>Other running options are on Facebook. Click the links below for more information</h5>
+        <div>
+            <ul>
+            <li><a href="https://www.facebook.com/groups/highlandcitystriders/">Summer Early Morning Track Workouts</a></li>
+            <li><a href="https://www.facebook.com/groups/highlandcitystriders/">Marathon Training Groups</a></li>
+            <li><a href="https://www.facebook.com/groups/429989967133637/">Ultra Runner Water Buffalo Faction Trail Runs</a></li>
+            </ul>
+        </div>
+     </div>
+    </div>
+
+    <script type="text/javascript">
+        /*
+           Set the viewed schedule based on the current month
+        */
+        var d = new Date();
+        var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+        var file = document.getElementById("InlineFrame1").getAttribute("src")
+
+        document.getElementById("InlineFrame1").setAttribute("src", file.replace("XXX", months[d.getMonth()]))
+    </script>
+
   </div>
 
 <!-- End Document
